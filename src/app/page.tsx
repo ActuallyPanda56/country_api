@@ -1,8 +1,4 @@
-import { config } from "@/config";
-import { Country } from "./constants";
-import { CountryCard } from "@/components/common/CountryCard";
-
-const fetchCountries = async (): Promise<Country[]> => {
+/* const fetchCountries = async (): Promise<Country[]> => {
   const response = await fetch(`${config.API_URL}/api/countries`);
 
   if (!response.ok) {
@@ -11,10 +7,10 @@ const fetchCountries = async (): Promise<Country[]> => {
 
   const countries = await response.json();
   return countries;
-};
+}; */
 
 export default async function Home() {
-  const countries = await fetchCountries();
+  // const countries = await fetchCountries();
 
   return (
     <div className=" mx-auto p-8 bg-gradient-to-br from-blue-100 to-gray-100 text-gray-900 rounded-lg shadow-lg">
@@ -27,7 +23,7 @@ export default async function Home() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {countries.map((country) => {
           return (
             <div
@@ -42,7 +38,7 @@ export default async function Home() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
