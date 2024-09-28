@@ -1,4 +1,4 @@
-/* // CountryPage.tsx
+// CountryPage.tsx
 
 // Other imports...
 import { CountryDetails } from "@/app/constants";
@@ -28,11 +28,9 @@ const fetchCountryDetails = async (
 interface CountryPageProps {
   params: { id: string };
 }
- */
-export default async function CountryPage() {
-  return <></>;
 
-  /*   const country = await fetchCountryDetails(params.id);
+export default async function CountryPage({ params }: CountryPageProps) {
+  const country = await fetchCountryDetails(params.id);
 
   if (!country) {
     return notFound();
@@ -158,5 +156,5 @@ export default async function CountryPage() {
         </main>
       </div>
     </div>
-  ); */
+  );
 }
